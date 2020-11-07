@@ -2,40 +2,26 @@ package com.company;
 
 import java.util.Random;
 
-public class Miner {
+public class GoodMiner extends Miner {
+
     private Pickaxe pickaxe;
     private int diamonds;
 
-    public Miner() {
-        pickaxe = new Pickaxe();
-        diamonds = 0;
+    @Override
+    public String toString() {
+        return "я хороший шахтер";
     }
 
     @Override
-    public String toString(){
-        return "я шахтер";
-    }
-
-
-    public int getDiamonds() {
-        return diamonds;
-    }
-
-    public Pickaxe getDurablePickaxe(){
-        return new DurablePickaxe();
-    }
-    public Pickaxe getPickaxe() {return new Pickaxe();}
-
-
-    public int kopat(Mine mine, int amount){
+    public int kopat(Mine mine, int amount) {
         int took = 0;
         Random random = new Random();
 
         while(pickaxe.getHp() > 0 && amount > 0) {
             mine.setDiamonds(mine.getDiamonds()-1);
             pickaxe.setHp(pickaxe.getHp()-random.nextInt(5));
-            took++;
-            amount--;
+            took = took + 2;
+            amount = amount -2;
             if (mine.getDiamonds() == 0){
                 break;
             }

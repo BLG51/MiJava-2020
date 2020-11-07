@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Demolitionist extends Miner {
 
+    private int diamonds;
     @Override
     public String toString(){
         return "я подрывник";

@@ -1,38 +1,34 @@
 package com.company;
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Mine mine = new Mine();
-        Miner miner = new Miner();
-        Demolitionist demolitionist = new Demolitionist();
-        System.out.println(miner.toString());
-        System.out.println(demolitionist.toString());
-
-
-
-
+//        Mine mine = new Mine();
+//        Miner miner = new Miner();
+//        Demolitionist demolitionist = new Demolitionist();
+//        System.out.println(miner.toString());
+//        System.out.println(demolitionist.toString());
+//
+//        GoodMiner gm = new GoodMiner();
+//gm.toString()
         /* sadasdsadsadsd */
+        ArrayList<String> al = new ArrayList<String>();
+        LinkedList<String> ll = new LinkedList<String>();
 
 
-        while(true) {
-            System.out.println("Сколько выкопать алмазов?");
-            Scanner scanner = new Scanner(System.in);
-            int amount = scanner.nextInt();
-            if (amount <= 0) {
-                System.out.println("выкопано всего " + miner.getDiamonds());
-                break;
-            } else {
-                mine = checkMine(mine);
-                System.out.println("выкопано  " + miner.kopat(mine, amount));
-            }
-        }
+        List<String> list = getList();
+        list.remove(0);
+
+    }
 
 
-
+    public static List<String> getList(){
+        List<String> list = new ArrayList<String>();
+        list.add("hi");
+        return list;
     }
 
     public static Mine checkMine(Mine mine) {
