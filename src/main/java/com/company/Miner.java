@@ -28,6 +28,12 @@ public class Miner {
 
 
     public int kopat(Mine mine, int amount){
+try {
+    if (amount <= 0) throw new IllegalArgumentException("wrong amount");
+} catch (Exception ex) {
+    
+}
+
         int took = 0;
         Random random = new Random();
 

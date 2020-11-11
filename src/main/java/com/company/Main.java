@@ -6,7 +6,13 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-//        Mine mine = new Mine();
+
+        MyLinkedList list = new MyLinkedList();
+        list.add("hi");
+        list.get(1);
+
+
+        //        Mine mine = new Mine();
 //        Miner miner = new Miner();
 //        Demolitionist demolitionist = new Demolitionist();
 //        System.out.println(miner.toString());
@@ -15,12 +21,13 @@ public class Main {
 //        GoodMiner gm = new GoodMiner();
 //gm.toString()
         /* sadasdsadsadsd */
-        ArrayList<String> al = new ArrayList<String>();
-        LinkedList<String> ll = new LinkedList<String>();
-
-
-        List<String> list = getList();
-        list.remove(0);
+//        ArrayList<String> al = new ArrayList<String>();
+//        LinkedList<String> ll = new LinkedList<String>();
+//
+//
+//        List<String> list = getList();
+//        list.remove(0);
+        //error: out of memory
 
     }
 

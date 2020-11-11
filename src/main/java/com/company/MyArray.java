@@ -7,21 +7,25 @@ public class MyArray {
     private int[] a;
     private int n;
 
-    MyArray(){
+    MyArray() {
         a = new int[5];
         n = 0;
     }
 
     public void toFile(String filepath) throws IOException {
         File f = new File(filepath);
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(f,true)),true);
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(f, true)), true);
         pw.print(toMyString());
     }
 
-    public void fromFile(String filepath) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File(filepath));
-        while (sc.hasNextInt()){
-            add(sc.nextInt());
+    public void fromFile(String filepath) {
+        try {
+            Scanner sc = new Scanner(new File(filepath));
+            while (sc.hasNextInt()) {
+                add(sc.nextInt());
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println("no file, deal with it");
         }
     }
 
@@ -61,8 +65,8 @@ public class MyArray {
             return;
         }
         for (int i = y; i < size() - 1; i++) {
-        a[i] = a[i+1];
-        n--;
+            a[i] = a[i + 1];
+            n--;
         }
     }
 }
